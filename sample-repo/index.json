@@ -1,0 +1,27 @@
+{
+  "epkg_index": 1,
+  "repo": "sample-repo",
+  "generated_by": "epkg-tools sample",
+  "packages": [
+    {
+      "pkgname": "hello",
+      "pkgver": "1.1-r0",
+      "pkgdesc": "Friendly hello demo for epkg, second release",
+      "arch": "any",
+      "filename": "hello-1.1-r0.epkg",
+      "sha256": "8ca0d5773a25c4bec28938af0186e2d7ab20a6c9a5102dcd4959a77342ac7904",
+      "size": 437,
+      "deps": []
+    },
+    {
+      "pkgname": "motd",
+      "pkgver": "1.0-r0",
+      "pkgdesc": "Sample config package: installs /etc/motd",
+      "arch": "any",
+      "filename": "motd-1.0-r0.epkg",
+      "sha256": "4e21324c091a9247f1c640e4acfc6e7fb22c6870b012ee6bcaac60cc8e8da1f5",
+      "size": 334,
+      "deps": []
+    }
+  ]
+}
