@@ -535,5 +535,17 @@ fi
 
 stop_server
 
+# =================================================================
+# e2e 8: epkg.conf parser edge cases (no-space "key=value", CRLF)
+echo "== e2e 8: conf parser edge cases =="
+start_full
+printf 'mirror=http://127.0.0.1:%s\r\ndb=%s/db2\r\ncache=%s/cache2\r\nroot=%s/root2/\r\naudit=off\r\n' \
+    "$PORT" "$WORK" "$WORK" "$WORK" > "$WORK/tight.conf"
+./epkg --conf "$WORK/tight.conf" update >/dev/null && echo "step conf-tight-update OK"
+./epkg --conf "$WORK/tight.conf" install hello >/dev/null && echo "step conf-tight-install OK"
+test -f "$WORK/root2/usr/bin/hello" && echo "step conf-tight-root OK"
+./epkg --conf "$WORK/tight.conf" remove hello >/dev/null
+stop_server
+
 rm -rf "$WORK"
 echo "== ALL TESTS PASSED =="
