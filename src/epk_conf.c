@@ -2,39 +2,41 @@
 #include "epk_conf.h"
 #include "../include/epk_port.h"
 
-static void conf_apply_line(epk_conf *c, char *line)
+/* Parse one line on a local copy. The caller walks the original
+ * NUL-split buffer; mutating it here (key trim, '=' split) used to
+ * break the walk and drop mirror/ca/pubkey on "key=value" lines. */
+static void conf_apply_line(epk_conf *c, const char *line)
 {
+    char buf[512];
     char *eq, *key, *val;
     char tmp[256];
+    char *h;
+    size_t n;
 
-    /* strip comments and trailing space */
-    {
-        char *h = strchr(line, '#');
-        if (h) *h = 0;
-    }
+    epk_strlcpy(buf, line, sizeof(buf));
+
+    /* strip comments */
+    h = strchr(buf, '#');
+    if (h) *h = 0;
+
+    key = buf;
     /* trim left */
-    while (*line == ' ' || *line == '\t') line++;
-    if (!*line) return;
+    while (*key == ' ' || *key == '\t') key++;
+    if (!*key) return;
     /* trim right */
-    {
-        size_t n = strlen(line);
-        while (n && (line[n-1] == ' ' || line[n-1] == '\t' ||
-                     line[n-1] == '\r' || line[n-1] == '\n'))
-            line[--n] = 0;
-    }
-    if (!*line) return;
+    n = strlen(key);
+    while (n && (key[n-1] == ' ' || key[n-1] == '\t' ||
+                 key[n-1] == '\r' || key[n-1] == '\n'))
+        key[--n] = 0;
+    if (!*key) return;
 
-    eq = strchr(line, '=');
+    eq = strchr(key, '=');
     if (!eq) return;
     *eq = 0;
-    key = line;
     val = eq + 1;
     while (*val == ' ' || *val == '\t') val++;
-    {
-        size_t kn = strlen(key);
-        while (kn && (key[kn-1] == ' ' || key[kn-1] == '\t')) key[--kn] = 0;
-    }
-    *eq = '=';          /* restore: caller walks NUL-split lines */
+    n = strlen(key);
+    while (n && (key[n-1] == ' ' || key[n-1] == '\t')) key[--n] = 0;
 
     epk_strlcpy(tmp, val, sizeof(tmp));
     if (strcmp(key, "mirror") == 0) {
