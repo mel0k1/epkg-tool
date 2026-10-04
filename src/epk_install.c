@@ -169,6 +169,7 @@ static int load_cached_index(epkg_ctx *ctx)
         epk_free(data);
         return 1;
     }
+    epk_free(data);          /* parser copied what it needs */
     ctx->ix_loaded = 1;
     return 0;
 }
