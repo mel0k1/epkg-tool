@@ -1,0 +1,469 @@
+{
+  "epkg_index": 1,
+  "repo": "epkg-packets",
+  "generated_by": "epkg-tools mkepkg/index",
+  "packages": [
+    {
+      "pkgname": "bar",
+      "pkgver": "2.1",
+      "pkgdesc": "Demo package bar (depends on foo) for the epkg-packets repository",
+      "arch": "any",
+      "filename": "bar-2.1.epkg",
+      "sha256": "cbeb82e3830e3e29c357d8c1aa491ce4e31258e7a55315b8f09b8396c5ba0e45",
+      "size": 480,
+      "deps": [
+        "foo"
+      ]
+    },
+    {
+      "pkgname": "bash-static",
+      "pkgver": "5.2.0-r0",
+      "pkgdesc": "GNU bash 5.2 (static, with readline+history)",
+      "arch": "x86_64",
+      "filename": "bash-static-5.2.0-r0.epkg",
+      "sha256": "67d38fa13d0f09743eaf406fa5a1f16ff54349060887a02c43cd5be85e5cb7f1",
+      "size": 1321192,
+      "deps": []
+    },
+    {
+      "pkgname": "binutils-static",
+      "pkgver": "2.43.1-r0",
+      "pkgdesc": "GNU binutils 2.43.1 (static: ar, as, nm, objcopy, objdump, ranlib, readelf, strip, strings, addr2line, c++filt, size, ld)",
+      "arch": "x86_64",
+      "filename": "binutils-static-2.43.1-r0.epkg",
+      "sha256": "ba2ef764dfb1045c54214e09dc8dddf636a9ad34571ae5e87cda551899c2b4e2",
+      "size": 8601761,
+      "deps": []
+    },
+    {
+      "pkgname": "bison",
+      "pkgver": "3.8.2-r0",
+      "pkgdesc": "GNU Bison 3.8.2 parser generator (static)",
+      "arch": "x86_64",
+      "filename": "bison-3.8.2-r0.epkg",
+      "sha256": "36479195addb4ed74d52579142af4da27981e4869cbfce491b9333ccfc5b4b9c",
+      "size": 672248,
+      "deps": []
+    },
+    {
+      "pkgname": "busybox-static",
+      "pkgver": "1.36.1-r0",
+      "pkgdesc": "BusyBox 1.36.1 (static, 401 applets) + symlinks: sh/awk/vi/sed/grep/bc/wget/...",
+      "arch": "x86_64",
+      "filename": "busybox-static-1.36.1-r0.epkg",
+      "sha256": "dcd924a570b4d39621f3d15136ef48f6b7346fb05b248fd19cdb584408bfe471",
+      "size": 1417723,
+      "deps": []
+    },
+    {
+      "pkgname": "coreutils-static",
+      "pkgver": "9.5.0-r0",
+      "pkgdesc": "GNU coreutils 9.5 (static, ~80 tools: ls/cp/cat/echo/head/tail/grep/sha256sum/...)",
+      "arch": "x86_64",
+      "filename": "coreutils-static-9.5.0-r0.epkg",
+      "sha256": "0c1257d059022d3cdc22cf3abcbf9fd87d1911074e6c4e0ddf2093408abd325d",
+      "size": 31581657,
+      "deps": []
+    },
+    {
+      "pkgname": "ctags-static",
+      "pkgver": "6.2.0-r0",
+      "pkgdesc": "Universal Ctags 6.2.0 (static, code navigation indexer) + readtags",
+      "arch": "x86_64",
+      "filename": "ctags-static-6.2.0-r0.epkg",
+      "sha256": "32bb60572c9af204669d8f4301f8e158bb589ac1b20bc698745e513b8f8e68da",
+      "size": 2041238,
+      "deps": []
+    },
+    {
+      "pkgname": "curl",
+      "pkgver": "8.11.0-r0",
+      "pkgdesc": "curl 8.11.0 (HTTP/1-2 client, no SSL, file/http protocols)",
+      "arch": "x86_64",
+      "filename": "curl-8.11.0-r0.epkg",
+      "sha256": "0ffe0d35fbb4d9bf4e0bc05908e2c2eb267ab9a873066fc1e5be38caa845cb54",
+      "size": 510286,
+      "deps": []
+    },
+    {
+      "pkgname": "diffutils-static",
+      "pkgver": "3.10-r0",
+      "pkgdesc": "GNU diffutils 3.10 (static: diff + cmp + sdiff + diff3)",
+      "arch": "x86_64",
+      "filename": "diffutils-static-3.10-r0.epkg",
+      "sha256": "bcef60cb676073b5a9a25202e381db55e48b14724d8bab371f9651663a4975eb",
+      "size": 1766257,
+      "deps": []
+    },
+    {
+      "pkgname": "dropbear-static",
+      "pkgver": "2024.86-r0",
+      "pkgdesc": "Dropbear SSH 2024.86 (static: sshd + ssh/dbclient + scp + dropbearkey)",
+      "arch": "x86_64",
+      "filename": "dropbear-static-2024.86-r0.epkg",
+      "sha256": "bb9b20a58f16301fd0aab225f1f593b0899bec7de700aeef29be67e605a1d0f7",
+      "size": 3145803,
+      "deps": []
+    },
+    {
+      "pkgname": "file-static",
+      "pkgver": "5.46-r0",
+      "pkgdesc": "file 5.46 (file type detector + libmagic.so + magic.mgc db + magic.h)",
+      "arch": "x86_64",
+      "filename": "file-static-5.46-r0.epkg",
+      "sha256": "a856cdb7e38f21cbf3d46075a48fe8eacc7a214997cb4f066c0bad2781baba4c",
+      "size": 813500,
+      "deps": []
+    },
+    {
+      "pkgname": "findutils-static",
+      "pkgver": "4.10.0-r0",
+      "pkgdesc": "GNU findutils 4.10.0 (static: find + xargs + locate)",
+      "arch": "x86_64",
+      "filename": "findutils-static-4.10.0-r0.epkg",
+      "sha256": "9da82578ae458617a4bbfb870779c00ea493f54649e043115993e3cdd7a0249e",
+      "size": 1673567,
+      "deps": []
+    },
+    {
+      "pkgname": "flex-static",
+      "pkgver": "2.6.4-r0",
+      "pkgdesc": "flex 2.6.4 (static fast lexical analyzer generator) + lex symlink",
+      "arch": "x86_64",
+      "filename": "flex-static-2.6.4-r0.epkg",
+      "sha256": "a0caeb97f6fa46ca13c4d6fe3e6fc97e5c56380abe470383b945c79dcc74446c",
+      "size": 169635,
+      "deps": []
+    },
+    {
+      "pkgname": "foo",
+      "pkgver": "1.0",
+      "pkgdesc": "Demo package foo for the epkg-packets repository",
+      "arch": "any",
+      "filename": "foo-1.0.epkg",
+      "sha256": "22d0ca3fc413f357b4edd97ca2365e5ef794b2093dad117f133ece3d9007d9f5",
+      "size": 513,
+      "deps": []
+    },
+    {
+      "pkgname": "gawk-static",
+      "pkgver": "5.3.0-r0",
+      "pkgdesc": "GNU awk 5.3.0 (static) + awk symlink",
+      "arch": "x86_64",
+      "filename": "gawk-static-5.3.0-r0.epkg",
+      "sha256": "94b842e9010eb0722f3ea41b464a91d93cfc219e53928e8d8184c989870ea13b",
+      "size": 986945,
+      "deps": []
+    },
+    {
+      "pkgname": "git-static",
+      "pkgver": "2.47.0-r0",
+      "pkgdesc": "Git 2.47.0 (static, no SSL/curl/tcltk)",
+      "arch": "x86_64",
+      "filename": "git-static-2.47.0-r0.epkg",
+      "sha256": "bf2a160656e1a5f0494a8785640499fa889e8fb0707eb55c73529eafb7349f80",
+      "size": 4657497,
+      "deps": []
+    },
+    {
+      "pkgname": "grep-static",
+      "pkgver": "3.11-r0",
+      "pkgdesc": "GNU grep 3.11 (static, with pcre2 support)",
+      "arch": "x86_64",
+      "filename": "grep-static-3.11-r0.epkg",
+      "sha256": "a669a71a2981d5b5c3a96272ad8b8d2d00fa670889648f9bdffab30942687c1b",
+      "size": 770833,
+      "deps": []
+    },
+    {
+      "pkgname": "gzip-static",
+      "pkgver": "1.13-r0",
+      "pkgdesc": "GNU gzip 1.13 (static: gzip + gunzip + zcat)",
+      "arch": "x86_64",
+      "filename": "gzip-static-1.13-r0.epkg",
+      "sha256": "5e76ba88f8c6bd136adaa3e072f80d9990cf9b182095a248d43b2169edde7b12",
+      "size": 484148,
+      "deps": []
+    },
+    {
+      "pkgname": "htop-static",
+      "pkgver": "3.3.0-r0",
+      "pkgdesc": "htop 3.3.0 (static process viewer, ncurses-based)",
+      "arch": "x86_64",
+      "filename": "htop-static-3.3.0-r0.epkg",
+      "sha256": "ca404716bb2e55d031f6365a0ed0c7f5ef3e1054a5e945de492f3258d6ae5eb0",
+      "size": 802643,
+      "deps": []
+    },
+    {
+      "pkgname": "jimtcl",
+      "pkgver": "0.84-r0",
+      "pkgdesc": "Jim Tcl 0.84 (static, small Tcl interpreter with json/oo/zlib extensions)",
+      "arch": "x86_64",
+      "filename": "jimtcl-0.84-r0.epkg",
+      "sha256": "86e6060ea79fde18ddfa49bc6d1bd948ba1799d6842be09489a00a281ce52cd7",
+      "size": 974627,
+      "deps": []
+    },
+    {
+      "pkgname": "less-static",
+      "pkgver": "668-r0",
+      "pkgdesc": "less 668 (static pager, ncurses-based)",
+      "arch": "x86_64",
+      "filename": "less-static-668-r0.epkg",
+      "sha256": "915f29015f48f2e408ee993dae1685756548c93c1dec939e4032058bf8bf8b77",
+      "size": 595233,
+      "deps": []
+    },
+    {
+      "pkgname": "lua-core",
+      "pkgver": "5.4.7-r0",
+      "pkgdesc": "Lua 5.4.7 bare interpreter (lua+luac, static, no modules)",
+      "arch": "x86_64",
+      "filename": "lua-core-5.4.7-r0.epkg",
+      "sha256": "ea18c4e0609f1ad15b376feeaac91917741766a165ba80071a622dcf17697102",
+      "size": 1300421,
+      "deps": []
+    },
+    {
+      "pkgname": "lua-dev",
+      "pkgver": "5.4.7-r0",
+      "pkgdesc": "Lua 5.4.7 headers (lua.h, lauxlib.h, lualib.h, luaconf.h) + liblua.a (static)",
+      "arch": "x86_64",
+      "filename": "lua-dev-5.4.7-r0.epkg",
+      "sha256": "03c73d12b7e21d400c98255e16ac445d1e21f77e33a332721fd4089d305109ce",
+      "size": 206944,
+      "deps": []
+    },
+    {
+      "pkgname": "lua-extended",
+      "pkgver": "5.4.7-r0",
+      "pkgdesc": "Lua 5.4.7 + json/re/mathx/complex/utf8x bundled modules",
+      "arch": "x86_64",
+      "filename": "lua-extended-5.4.7-r0.epkg",
+      "sha256": "7c9ae2c828e1c525743bce3fb8b9f3dbd498325da73dd01a2f50471355c22418",
+      "size": 1303962,
+      "deps": []
+    },
+    {
+      "pkgname": "m4-static",
+      "pkgver": "1.4.19-r0",
+      "pkgdesc": "GNU m4 1.4.19 (static macro processor)",
+      "arch": "x86_64",
+      "filename": "m4-static-1.4.19-r0.epkg",
+      "sha256": "13ce8f296e27dcafc2bfd9c6277885aa21812b22f327a716d6935756e298600f",
+      "size": 522970,
+      "deps": []
+    },
+    {
+      "pkgname": "make-static",
+      "pkgver": "4.4.1-r0",
+      "pkgdesc": "GNU Make 4.4.1 (static)",
+      "arch": "x86_64",
+      "filename": "make-static-4.4.1-r0.epkg",
+      "sha256": "4d52d3b8d29aff7e95f168e5ba92d8c82c570a63eaf4443e31386179458bd971",
+      "size": 692108,
+      "deps": []
+    },
+    {
+      "pkgname": "mbedtls-static",
+      "pkgver": "3.6.2-r0",
+      "pkgdesc": "Mbed TLS 3.6.2 (static libs + headers, dev-only)",
+      "arch": "x86_64",
+      "filename": "mbedtls-static-3.6.2-r0.epkg",
+      "sha256": "43cd0e392358beab25574a99c6ed588d61b9945ce3c14d4d372f9869bd1d1a3a",
+      "size": 1090829,
+      "deps": []
+    },
+    {
+      "pkgname": "mc-static",
+      "pkgver": "4.8.33-r0",
+      "pkgdesc": "Midnight Commander 4.8.33 (file manager, libglib-2.0.so bundled, system binary)",
+      "arch": "x86_64",
+      "filename": "mc-static-4.8.33-r0.epkg",
+      "sha256": "cfddd5ac01b3088233fbe7dbdd749aa234502252cf5a8c8e1a33f7680ada365d",
+      "size": 3112972,
+      "deps": []
+    },
+    {
+      "pkgname": "micropython",
+      "pkgver": "1.24.0-r0",
+      "pkgdesc": "MicroPython 1.24.0 unix port (static, mokifi variant: no ssl/bt/ffi/socket)",
+      "arch": "x86_64",
+      "filename": "micropython-1.24.0-r0.epkg",
+      "sha256": "f2b3785263d411cb71b904d4fdb9aa66d2986a6c256336a388a093c472c4d59c",
+      "size": 1196862,
+      "deps": []
+    },
+    {
+      "pkgname": "nano-static",
+      "pkgver": "7.2.0-r0",
+      "pkgdesc": "GNU nano 7.2 (static, --enable-tiny, with utf8)",
+      "arch": "x86_64",
+      "filename": "nano-static-7.2.0-r0.epkg",
+      "sha256": "73fadcd5f7af35861d8da206fdc2eae86082f96394b90cfde7cb7685c5f9101a",
+      "size": 759898,
+      "deps": []
+    },
+    {
+      "pkgname": "nasm",
+      "pkgver": "2.16.03-r0",
+      "pkgdesc": "NASM 2.16.03 + ndisasm disassembler (static)",
+      "arch": "x86_64",
+      "filename": "nasm-2.16.03-r0.epkg",
+      "sha256": "ab85c5feb0a500f918a163dc2522882d8a988ea788ee8f9c7e240957d0559298",
+      "size": 1334528,
+      "deps": []
+    },
+    {
+      "pkgname": "openssl-static",
+      "pkgver": "3.4.0-r0",
+      "pkgdesc": "OpenSSL 3.4.0 (openssl CLI + libssl.a + libcrypto.a + headers)",
+      "arch": "x86_64",
+      "filename": "openssl-static-3.4.0-r0.epkg",
+      "sha256": "2bb35ceb458dc226f88607de3a1a30a4176ca073f43c6516d46d825e26e3f9c4",
+      "size": 7591774,
+      "deps": []
+    },
+    {
+      "pkgname": "patch-static",
+      "pkgver": "2.7.6-r0",
+      "pkgdesc": "GNU patch 2.7.6 (static)",
+      "arch": "x86_64",
+      "filename": "patch-static-2.7.6-r0.epkg",
+      "sha256": "5bf7f54c9551071b9ed54444e4741c4b902f0419783c823212d4ceaf1e791873",
+      "size": 558938,
+      "deps": []
+    },
+    {
+      "pkgname": "pkgconf",
+      "pkgver": "2.3.0-r0",
+      "pkgdesc": "pkgconf 2.3.0 (pkg-config replacement) + bomtool",
+      "arch": "x86_64",
+      "filename": "pkgconf-2.3.0-r0.epkg",
+      "sha256": "4e082e977d26dd6df58cb9f4c66acc8e92e48bfbdc4b10da64baa799204428eb",
+      "size": 45296,
+      "deps": []
+    },
+    {
+      "pkgname": "sed-static",
+      "pkgver": "4.9-r0",
+      "pkgdesc": "GNU sed 4.9 (static stream editor)",
+      "arch": "x86_64",
+      "filename": "sed-static-4.9-r0.epkg",
+      "sha256": "e7e5f5698794d91462eaa43d7fde118a692ecbfb73e9ebe65f884b6e225ba79e",
+      "size": 494185,
+      "deps": []
+    },
+    {
+      "pkgname": "sqlite-static",
+      "pkgver": "3.46.0-r0",
+      "pkgdesc": "SQLite 3.46.0 (static shell + libsqlite3.a + sqlite3.h)",
+      "arch": "x86_64",
+      "filename": "sqlite-static-3.46.0-r0.epkg",
+      "sha256": "5bcc8b346e4bf6075d768982d5c97583f6c77275b0b9ac0b726582617789c112",
+      "size": 2664572,
+      "deps": []
+    },
+    {
+      "pkgname": "strace-static",
+      "pkgver": "6.11-r0",
+      "pkgdesc": "strace 6.11 (static syscall tracer)",
+      "arch": "x86_64",
+      "filename": "strace-static-6.11-r0.epkg",
+      "sha256": "1e19d1fbbcfc0785e41c520c0c14cacd620e4116e98da12061be3eaf2aa5fcc5",
+      "size": 1145246,
+      "deps": []
+    },
+    {
+      "pkgname": "tar-static",
+      "pkgver": "1.35-r0",
+      "pkgdesc": "GNU tar 1.35 (static)",
+      "arch": "x86_64",
+      "filename": "tar-static-1.35-r0.epkg",
+      "sha256": "4ca0b4baf31dd75b0c3c5833fe8ba861cb38e92602c2a26ef5a4b41ccb9dd428",
+      "size": 843704,
+      "deps": []
+    },
+    {
+      "pkgname": "tcc",
+      "pkgver": "0.9.28rc-r0",
+      "pkgdesc": "TinyCC - small, fast C compiler (mob 0fb5430, 2026-09-04)",
+      "arch": "x86_64",
+      "filename": "tcc-0.9.28rc-r0.epkg",
+      "sha256": "da080581cae098f69fd2e9725a8224297f0c7c91950519ac9eacdd673e44af3f",
+      "size": 576541,
+      "deps": []
+    },
+    {
+      "pkgname": "texinfo-static",
+      "pkgver": "7.1-r0",
+      "pkgdesc": "GNU texinfo 7.1 (static: install-info binary)",
+      "arch": "x86_64",
+      "filename": "texinfo-static-7.1-r0.epkg",
+      "sha256": "32da499fc418c3b4eefa7f4b3b7815548adc0389668e77bf3d7f006a7d2f5e9c",
+      "size": 446396,
+      "deps": []
+    },
+    {
+      "pkgname": "toybox",
+      "pkgver": "0.8.14-r0",
+      "pkgdesc": "Toybox 0.8.14 (static, ~250 commands: ls/cat/sh/awk/sed/vi/wget...)",
+      "arch": "x86_64",
+      "filename": "toybox-0.8.14-r0.epkg",
+      "sha256": "f7e0032709607cf613c61f1fa6d59c804558877f059eb134ee858d9e41ffcfb8",
+      "size": 1032114,
+      "deps": []
+    },
+    {
+      "pkgname": "tree-static",
+      "pkgver": "2.1.1-r0",
+      "pkgdesc": "tree 2.1.1 (static, recursive directory listing)",
+      "arch": "x86_64",
+      "filename": "tree-static-2.1.1-r0.epkg",
+      "sha256": "f2272cab15efec703511340c167c3fc7f9ea58b1bbff6be25e8c50313f2f334c",
+      "size": 555435,
+      "deps": []
+    },
+    {
+      "pkgname": "vim-tiny",
+      "pkgver": "9.1.0-r0",
+      "pkgdesc": "Vim 9.1 (static, tiny build, no GUI/X/netbeans)",
+      "arch": "x86_64",
+      "filename": "vim-tiny-9.1.0-r0.epkg",
+      "sha256": "ef667c017c6ffe808343831e8668b876f8f7ef36c8fa18fada6f97f2697b813f",
+      "size": 1504881,
+      "deps": []
+    },
+    {
+      "pkgname": "wget-static",
+      "pkgver": "1.21.4-r0",
+      "pkgdesc": "GNU wget 1.21.4 (HTTP/HTTPS/FTP downloader, no SSL)",
+      "arch": "x86_64",
+      "filename": "wget-static-1.21.4-r0.epkg",
+      "sha256": "ccddb1efad10c83b11a45f882e05556cd8db38f181a6425ff042ac8e1c6e10b1",
+      "size": 915428,
+      "deps": []
+    },
+    {
+      "pkgname": "xz-static",
+      "pkgver": "5.6.3-r0",
+      "pkgdesc": "XZ Utils 5.6.3 (static: xz + unxz + xzcat + lzma + unlzma)",
+      "arch": "x86_64",
+      "filename": "xz-static-5.6.3-r0.epkg",
+      "sha256": "a41444978b01311ffd95a8a24a02246d3a2dc7873e7c0134d12e41b9930ee89c",
+      "size": 141582,
+      "deps": []
+    },
+    {
+      "pkgname": "yasm",
+      "pkgver": "1.3.0-r0",
+      "pkgdesc": "Yasm 1.3.0 modular assembler (static)",
+      "arch": "x86_64",
+      "filename": "yasm-1.3.0-r0.epkg",
+      "sha256": "299bb5faa772a65eaeec7b1bccd52206f33f07ae36f93f9264d9f23cd1545043",
+      "size": 742274,
+      "deps": []
+    }
+  ]
+}
