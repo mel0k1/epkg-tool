@@ -80,7 +80,7 @@ int epk_conf_parse_file(epk_conf *c, const char *path)
 {
     epk_file f;
     uint8_t raw[4096];
-    unsigned n = 0, i;
+    unsigned n = 0;
     int r;
 
     f = epk_open(path, EPK_O_RDONLY);
@@ -90,9 +90,17 @@ int epk_conf_parse_file(epk_conf *c, const char *path)
         n += (unsigned)r;
     epk_close(f);
 
-    /* parse: split on newlines (in place) */
-    for (i = 0; i < n; i++)
-        if (raw[i] == '\n' || raw[i] == '\r') raw[i] = 0;
+    /* normalize in place: drop CR, split on LF only, so lines stay
+     * separated by a single NUL (CRLF used to leave two NULs and the
+     * walk stopped after the first line) */
+    {
+        unsigned w = 0, r2;
+        for (r2 = 0; r2 < n; r2++) {
+            if (raw[r2] == '\r') continue;
+            raw[w++] = (raw[r2] == '\n') ? 0 : raw[r2];
+        }
+        n = w;
+    }
     raw[n < sizeof(raw) ? n : sizeof(raw) - 1] = 0;
     {
         char *line = (char *)raw;
