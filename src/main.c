@@ -111,7 +111,12 @@ static void parse_globals(int argc, char **argv,
     *nrest = n;
 }
 
-int main(int argc, char **argv)
+typedef struct {
+    int    argc;
+    char **argv;
+} epk_main_args;
+
+int epkg_main(int argc, char **argv)
 {
     epk_conf conf;
     epkg_ctx ctx;
@@ -260,3 +265,21 @@ int main(int argc, char **argv)
     epkg_close(&ctx);
     return 1;
 }
+
+/* epkg sits on a dedicated big stack: its deepest frames (extract,
+ * PKGINFO, inflate state) overflow small kernel stacks (see
+ * epk_bigstack_run in the port layer). */
+static int bigstack_thunk(void *v)
+{
+    epk_main_args *a = (epk_main_args *)v;
+    return epkg_main(a->argc, a->argv);
+}
+
+int main(int argc, char **argv)
+{
+    epk_main_args a;
+    a.argc = argc;
+    a.argv = argv;
+    return epk_bigstack_run(bigstack_thunk, &a);
+}
+

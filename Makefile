@@ -18,6 +18,11 @@ INC      = -Iinclude -Isrc -Isrc/tls/bearssl/inc -Isrc/tls/bearssl/src
 
 PORT    ?= epk_port_posix.c
 
+# pthread is used by the POSIX big-stack runner (epk_bigstack_run)
+ifeq ($(PORT),epk_port_posix.c)
+CFLAGS  += -pthread
+endif
+
 BEAR    = $(shell ls src/tls/bearssl/src/*/*.c 2>/dev/null)
 
 CORE    = src/epk_util.c \

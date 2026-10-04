@@ -118,6 +118,15 @@ uint32_t epk_seed(void);
 /* Optional: environment lookup. A hobby OS may always return NULL. */
 const char *epk_getenv(const char *name);
 
+/* epkg's deepest call paths (install/upgrade extraction) use tens of
+ * KiB of stack; on a small kernel stack (e.g. 64 KiB) they overflowed
+ * and clobbered memory below it. Run fn(arg) on a dedicated stack of
+ * at least EPK_STACK_MIN bytes. A port that cannot switch stacks may
+ * just call fn(arg) directly — then its own epkg stack must be big
+ * enough. Returns fn's return value. */
+#define EPK_STACK_MIN (256u * 1024u)
+int epk_bigstack_run(int (*fn)(void *), void *arg);
+
 /* ------------------------------------------------------------------ */
 /* Network (TCP only; TLS is implemented inside epkg-tools core)       */
 /* ------------------------------------------------------------------ */

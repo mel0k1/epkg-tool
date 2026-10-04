@@ -136,6 +136,43 @@ uint32_t epk_seed(void)
 
 const char *epk_getenv(const char *name) { return getenv(name); }
 
+/* ---------------- big stack ---------------- */
+
+#include <pthread.h>
+
+typedef struct {
+    int (*fn)(void *);
+    void *arg;
+    int   rc;
+} bigstack_job;
+
+static void *bigstack_trampoline(void *p)
+{
+    bigstack_job *j = (bigstack_job *)p;
+    j->rc = j->fn(j->arg);
+    return 0;
+}
+
+int epk_bigstack_run(int (*fn)(void *), void *arg)
+{
+    pthread_attr_t a;
+    pthread_t t;
+    bigstack_job j;
+    int r;
+
+    j.fn = fn; j.arg = arg; j.rc = -1;
+    if (pthread_attr_init(&a) != 0) return fn(arg);
+    if (pthread_attr_setstacksize(&a, EPK_STACK_MIN) != 0) {
+        pthread_attr_destroy(&a);
+        return fn(arg);
+    }
+    r = pthread_create(&t, &a, bigstack_trampoline, &j);
+    pthread_attr_destroy(&a);
+    if (r != 0) return fn(arg);      /* fallback: caller's stack */
+    pthread_join(t, 0);
+    return j.rc;
+}
+
 /* ---------------- network ---------------- */
 epk_sock epk_tcp_connect(const char *host, const char *port,
                          uint32_t timeout_ms)
